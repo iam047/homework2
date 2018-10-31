@@ -6,17 +6,17 @@ const setRep = (arr) => {
     function getMinIndex(arr) {
         let min = 0;
         for (let i = 1; i < arr.length; i++) {
-            arr[i] > arr[ min ] ? min = i : false;
+            arr[i] > arr[min] ? min = i : false;
         }
-        return { indexMin: min, minEl: arr[ min ] };
+        return { indexMin: min, minEl: arr[min] };
     }
 
     function getMaxIndex(arr) {
         let max = 0;
         for (let i = 1; i < arr.length; i++)  {
-            arr[i] > arr[ max ] ? max = i : false;
+            arr[i] > arr[max] ? max = i : false;
         }
-        return { indexMax: max, maxEl: arr[ max ] };
+        return { indexMax: max, maxEl: arr[max] };
     }
 
     const arrSum = (arr) => {
@@ -43,7 +43,7 @@ const setRep = (arr) => {
     return { replaceArr: array, min: min.minEl, max: max.maxEl, sum: sum };
 };
 
-let Array  = [ -5, 10, 5, undefined, 5, NaN, 5, -3333.421, 321324 ];
+let Array  = [-5, 10, 5, undefined, 5, NaN, 5, -3333.421, 321324];
 const calc = (arr) => {
     const obj = setRep(arr);
     console.log(JSON.stringify(obj, null, 4));
@@ -52,7 +52,7 @@ calc(Array);
 
 /////////// task 2 /////////////////
 
-let arr2    = [ 1, -2, 5, -6 ];
+let arr2    = [1, -2, 5, -6];
 const calc2 = (arr) => {
     const sum    = arr.reduce((a, b) => a + b);
     let max      = 0;
@@ -85,7 +85,7 @@ calc2(arr2);
 const square = function (x) {
     return x * x;
 };
-const arr    = [ 1, 2, 3, 4 ];
+const arr    = [1, 2, 3, 4];
 
 function map(fn, arr) {
     let mas = [];
